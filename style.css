@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Norse Bold";
+    src: url("./fonts/Norse-Bold.otf");
+}
+
+:root {
+    --title-font-size: 6em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 65vh;
+    text-align: center;
+}
+
+.title {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > h1 {
+    font-family: "Norse Bold";
+    font-size: var(--title-font-size);
+}
+
+.title > img {
+    height: calc(var(--title-font-size) + 1em);
+    width: auto;
+}
+
+.photo-credit {
+    padding-bottom: 15px;
+}
+
+.photo-credit > a {
+    color: #fff;
+}
+
+.right {
+    flex: 2;
+}
