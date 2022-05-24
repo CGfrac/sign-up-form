@@ -4,12 +4,16 @@
 }
 
 :root {
-    --title-font-size: 6em;
+    --title-font-size: 6rem;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --error-color: #e60101;
+    --green: #596D48;
 }
 
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 .main-container {
@@ -43,7 +47,7 @@
 }
 
 .title > img {
-    height: calc(var(--title-font-size) + 1em);
+    height: calc(var(--title-font-size) + 1rem);
     width: auto;
 }
 
@@ -57,4 +61,95 @@
 
 .right {
     flex: 2;
+    padding: 12vh 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.right p {
+    padding: 0 10%;
+}
+
+.call-to-action {
+    display: block;
+}
+
+form {
+    margin-top: 64px;
+    box-shadow: 0 3px 8px 0 var(--box-shadow-color);
+    padding: 16px 10%;
+}
+
+section {
+    display: flex;
+    gap: 64px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+}
+
+.right > *,
+form > * {
+    margin-bottom: 32px;
+}
+
+button {
+    margin-left: 10%;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--green);
+    box-shadow: 2px 2px 8px 2px var(--box-shadow-color);
+}
+
+input {
+    width: 220px;
+    font-size: 1.1rem;
+    padding: 4px 8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+input:focus {
+    border: none;
+    border: 1px solid #1717fd;
+    outline: none;
+    box-shadow: 1px 1px 4px 0 var(--box-shadow-color);
+}
+
+.error,
+.error:focus {
+    border: 1px solid var(--error-color);
+}
+
+p.password-error-message {
+    color: var(--error-color);
+    font-size: 0.7rem;
+    font-weight: lighter;
+    padding: 0;
+}
+
+.password-error-message::before {
+    content: '* ';
+}
+
+button + p {
+    font-weight: 400;
+}
+
+button + p > a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: bold;
 }

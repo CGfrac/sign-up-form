@@ -17,23 +17,45 @@
             <p class="photo-credit">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         </div>
         <div class="right">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <span class="call-to-action">Sign up <em>now</em> to get started.</span></p>
             <p>You <em>know</em> you want to.</p>
 
             <form action="" method="get">
                 <legend>Let's do this!</legend>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name">
-                <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name">
-                <label for="email">EMAIL</label>
-                <input type="text" id="email">
-                <label for="phone-number">PHONE NUMBER</label>
-                <input type="text" id="phone-number">
-                <label for="password">PASSWORD</label>
-                <input type="text" id="password">
-                <label for="confirm-password">CONFIRM PASSWORD</label>
-                <input type="text" id="confirm-password">
+
+                <section>
+                    <div class="input">
+                        <label for="first-name">FIRST NAME</label>
+                        <input type="text" id="first-name">
+                    </div>
+                    <div class="input">
+                        <label for="last-name">LAST NAME</label>
+                        <input type="text" id="last-name">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="input">
+                        <label for="email">EMAIL</label>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="input">
+                        <label for="phone-number">PHONE NUMBER</label>
+                        <input type="text" id="phone-number">
+                    </div>
+                </section>
+
+                <section>
+                    <div class="input">
+                        <label for="password">PASSWORD</label>
+                        <input type="text" id="password" class="error">
+                        <p class="password-error-message">Passwords do not match</p>
+                    </div>
+                    <div class="input">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="text" id="confirm-password" class="error">
+                    </div>
+                </section>
             </form>
 
             <button>Create Account</button>
