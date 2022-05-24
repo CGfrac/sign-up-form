@@ -82,7 +82,8 @@ form {
 
 section {
     display: flex;
-    gap: 64px;
+    flex-wrap: wrap;
+    gap: 8px 64px;
 }
 
 .input {
@@ -152,4 +153,14 @@ button + p > a {
     text-decoration: none;
     color: var(--green);
     font-weight: bold;
+}
+
+@media (max-width: 1030px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left {
+        gap: 32px;
+    }
 }
